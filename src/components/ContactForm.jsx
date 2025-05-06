@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import img from "../assets/images/contact-form.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { SpinnerContext } from "./SpinnerContext";
 import { companyDetails } from "../data/constant";
+import { industries } from "../pages/Home";
 
-const ContactForm = ({ headline, id }) => {
+const ContactForm = ({ headline, id, preselectedIndustry }) => {
   const { setSpinner } = useContext(SpinnerContext);
   const navigate = useNavigate();
+  const [selectedIndustry, setSelectedIndustry] = useState(preselectedIndustry || "");
+  
   const {
     register,
     handleSubmit,
@@ -22,8 +25,21 @@ const ContactForm = ({ headline, id }) => {
       phone: "",
       company: "",
       message: "",
+      industry: preselectedIndustry || "",
     },
   });
+
+  // Industry-specific CTAs
+  const industryCTAs = {
+    "Healthcare": "Explore AI-Powered Diagnostic Solutions",
+    "Finance": "Discover AI Financial Risk Solutions",
+    "Technology": "Accelerate with AI Tech Solutions",
+    "Retail & E-commerce": "Transform Your E-commerce with AI",
+    "SaaS": "Enhance Your SaaS with AI Features",
+    "Business Services": "Optimize Business Processes with AI",
+    "Media & Entertainment": "Revolutionize Media Content with AI",
+    "": "Send Message" // Default
+  };
 
   // handle form submit click
   const handleFormSubmit = async (values) => {
@@ -33,6 +49,7 @@ const ContactForm = ({ headline, id }) => {
     emailBody += "Email: " + values.email + "\n\n";
     values.company && (emailBody += "Company: " + values.company + "\n\n");
     emailBody += "Phone: " + values.phone + "\n\n";
+    values.industry && (emailBody += "Industry: " + values.industry + "\n\n");
     emailBody += "Message:\n" + values.message;
 
     // Construct the request payload
@@ -65,6 +82,7 @@ const ContactForm = ({ headline, id }) => {
       })
       .finally(() => setSpinner(false));
   };
+  
   return (
     <div
       id={id}
@@ -75,7 +93,7 @@ const ContactForm = ({ headline, id }) => {
         className="bg-purpleColor text-white p-8 sm:p-10 rounded-2xl"
       >
         <h3 className="section-heading">
-          {headline ? headline : "Let’s build something great together."}
+          {headline ? headline : "Let's build something great together."}
         </h3>
         <form
           onSubmit={handleSubmit(handleFormSubmit)}
@@ -139,11 +157,34 @@ const ContactForm = ({ headline, id }) => {
             />
             <small className="text-primary">{errors.phone?.message}</small>
           </div>
+          
+          {/* Industry Selection */}
+          <div className="">
+            <select
+              className="outline-none p-2 bg-transparent border-b w-full text-white"
+              {...register("industry")}
+              onChange={(e) => setSelectedIndustry(e.target.value)}
+              value={selectedIndustry}
+            >
+              <option value="" className="text-black">Select Your Industry (Optional)</option>
+              {industries.map((industry) => (
+                <option 
+                  key={industry.title} 
+                  value={industry.title}
+                  className="text-black"
+                >
+                  {industry.title}
+                </option>
+              ))}
+              <option value="Other" className="text-black">Other</option>
+            </select>
+          </div>
+          
           <div className="">
             <textarea
-              type="tel"
               className="placeholder:text-white outline-none p-2 bg-transparent border-b w-full"
               placeholder="Message"
+              rows="4"
               {...register("message", {
                 required: "Message is required",
                 validate: (val) => {
@@ -162,15 +203,15 @@ const ContactForm = ({ headline, id }) => {
               disabled={isSubmitting}
               className="btn rounded bg-white text-black w-full hover:bg-primary hover:text-white hover:shadow-primary/20"
             >
-              Send Message
+              {industryCTAs[selectedIndustry]}
             </button>
-            {/* <small className="">
+            <small className="text-white/80">
               By sending this form, I confirm that I have read and accepted the
-              <Link className="font-semibold" to="/">
+              <Link className="font-semibold text-white" to="/privacy-policy">
                 {" "}
                 Privacy Policy.
               </Link>
-            </small> */}
+            </small>
           </div>
         </form>
       </div>

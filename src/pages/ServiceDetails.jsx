@@ -2,12 +2,15 @@ import React, { lazy } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { services } from "../data/services";
 import { Helmet } from "react-helmet";
+import { createUrlParam } from "../utils/helper";
 
 const BlogsSection = lazy(() => import("../components/website/BlogsSection"));
 
 const ServiceDetails = () => {
-  const { name } = useParams();
-  const data = services.find((service) => service.title === name);
+  const { url } = useParams();
+  const data = services.find(
+    (service) => createUrlParam(service.title) === url
+  );
   if (!data) return <Navigate to="/" />;
   return (
     <div className="pt-[10rem] pb-[4rem]">
@@ -31,6 +34,7 @@ const ServiceDetails = () => {
           </div>
           <div
             data-aos="fade-up"
+            className="pt-6"
             dangerouslySetInnerHTML={{ __html: data.html.firstSection }}
           ></div>
           <div className="flex flex-col md:grid grid-cols-2 items-center mt-[3rem] gap-5">

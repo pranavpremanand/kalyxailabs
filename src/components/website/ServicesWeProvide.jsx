@@ -3,6 +3,7 @@ import { services } from "../../data/services";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ArrowLinkButton } from "../ArrowButtons";
+import { createUrlParam } from "../../utils/helper";
 
 const ServicesWeProvide = ({ length }) => {
   return (
@@ -14,7 +15,7 @@ const ServicesWeProvide = ({ length }) => {
         {services.slice(0, length).map((item, i) => (
           <Link
             key={item.title}
-            to={`/services/${item.title}`}
+            to={`/services/${createUrlParam(item.title)}`}
             className={`group h-full overflow-hidden space-y-6 odd:bg-secondary/70 even:bg-primary/70 odd:hover:bg-primary/70 even:hover:bg-secondary/70 p-5 rounded-xl transition-all duration-300
               
               `}
@@ -47,18 +48,10 @@ const ServicesWeProvide = ({ length }) => {
                 </div>
               </div>
             </div>
-            {/* <Link
-              to={`/services/${item.title}`}
-              className="btn rounded lg:translate-y-[5rem] group-hover:translate-y-0 bg-white/40 hover:bg-white hover:shadow-transparent gap-2 w-fit"
-            >
-              Read More <ArrowRight className="w-5 h-5" />
-            </Link> */}
           </Link>
         ))}
       </div>
-      {length && (
-        <ArrowLinkButton to="/services">View All</ArrowLinkButton>
-      )}
+      {length && <ArrowLinkButton to="/services">View All</ArrowLinkButton>}
     </div>
   );
 };

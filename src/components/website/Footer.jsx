@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Link as Scroll } from "react-scroll";
 import { services } from "../../data/services";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { createUrlParam } from "../../utils/helper";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link to={`/services/${service.title}`} className="link">
+                  <Link to={`/services/${createUrlParam(service.title)}`} className="link">
                     {service.title}
                   </Link>
                 </li>

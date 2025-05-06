@@ -1,5 +1,5 @@
 import React, { lazy, useContext } from "react";
-import banner from "../assets/images/contactus-banner.jpg";
+import banner from "../assets/images/contactus-banner.webp";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import { companyDetails } from "../data/constant";
 import { Link, useNavigate } from "react-router-dom";
@@ -71,11 +71,11 @@ const ContactUs = () => {
       .finally(() => setSpinner(false));
   };
   return (
-    <div className="pt-[4rem]">
+    <div className="">
       <div>
         <img
           src={banner}
-          className="w-full aspect-[5/3] md:aspect-[6/2] object-cover object-[30%_100%] md:object-top"
+          className="w-full aspect-[5/3] md:aspect-[6/2.5] object-cover object-[30%_100%] md:object-bottom"
           alt="Contact Us - Get in Touch Banner"
           title="Contact Us Banner"
         />

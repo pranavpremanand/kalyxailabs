@@ -4,7 +4,6 @@ import bannerVid from "../assets/vids/banner.mp4";
 import {
   Ambulance,
   ArrowRight,
-  BrainCircuit,
   BriefcaseBusiness,
   Cloudy,
   CodeXml,
@@ -23,6 +22,9 @@ import whyWorkWithUs2 from "../assets/images/whyworkwithus2.png";
 import whyWorkWithUs3 from "../assets/images/whyworkwithus3.png";
 import whyWorkWithUs4 from "../assets/images/whyworkwithus4.png";
 import { ArrowLinkButton } from "../components/ArrowButtons";
+import Approach from "../components/Approach";
+import IndustrySolutions from "../components/IndustrySolutions";
+import ResultsTimeline from "../components/ResultsTimeline";
 
 const ContactForm = lazy(() => import("../components/ContactForm"));
 const BlogsSection = lazy(() => import("../components/website/BlogsSection"));
@@ -48,7 +50,7 @@ const bannerServices = [
   },
 ];
 
-const industries = [
+export const industries = [
   {
     icon: Ambulance,
     title: "Healthcare",
@@ -76,10 +78,6 @@ const industries = [
   {
     icon: Tv,
     title: "Media & Entertainment",
-  },
-  {
-    icon: BrainCircuit,
-    title: "AI",
   },
 ];
 
@@ -173,7 +171,7 @@ const Home = () => {
             We specialize in delivering custom solutions for a wide range of
             industries.
           </p>
-          <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+          <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
             {industries.map((item) => {
               const IconComponent = item.icon;
               return (
@@ -192,56 +190,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="pt-[4rem]">
-        <h2 data-aos="fade-up" className="wrapper section-heading text-center">
-          How Kalyx AI Labs helps you deliver the best results
-        </h2>
-        <div
-          data-aos="fade-up"
-          className="wrapper grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-[3rem] mt-10"
-        >
-          {[
-            {
-              title: "Collaborative Partnerships",
-              desc: "We believe in building lasting partnerships through close collaboration, aligning with your business goals to deliver impactful, client-focused solutions.",
-              styles: "bg-[#7C42DA] lg:rotate-[-18deg] lg:translate-y-[8rem]",
-            },
-            {
-              title: "Agility and Adaptability",
-              desc: "Our agile approach ensures rapid response to evolving business needs and market trends, keeping your digital solutions future-ready and competitive.",
-              styles: "bg-[#F8B000] lg:rotate-[-10deg] lg:translate-y-[3rem]",
-            },
-            {
-              title: "Uncompromising Quality",
-              desc: "From concept to deployment, we prioritize precision, performance, and long-term value, delivering solutions that meet the highest quality standards.",
-              styles: "bg-[#B94391]",
-            },
-            {
-              title: "Client-Centric Focus",
-              desc: "Your success is our mission. We go above and beyond to ensure every project meets your expectations and drives measurable results.",
-              styles: "bg-[#D1B9F7] lg:rotate-[10deg] lg:translate-y-[3rem]",
-            },
-            {
-              title: "Transparent Communication",
-              desc: "We uphold transparency and accountability through consistent updates, honest feedback, and a commitment to delivering exactly what we promise.",
-              styles:
-                "bg-[#E85535] col-span-2 md:col-span-1 w-1/2 mx-auto md:w-full lg:rotate-[18deg] lg:translate-y-[8rem]",
-            },
-          ].map((item) => (
-            <div
-              className={`p-5 ${item.styles} h-full w-full flex items-center hover:rotate-[180deg] group text-center rounded-xl transition-all duration-300`}
-              key={item.title}
-            >
-              <div className="space-y-3 group-hover:scale-y-[-1] group-hover:scale-x-[-1] transition-all duration-300">
-                <p className="md:text-lg font-bold leading-tight">
-                  {item.title}
-                </p>
-                <p className="text-[.9rem]">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ResultsTimeline />
       <section className="wrapper pt-[4rem] lg:mt-[9rem]">
         <div
           data-aos="fade-up"
@@ -267,7 +216,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <Approach />
+      <IndustrySolutions />
       <section className="pt-[4rem] wrapper space-y-3">
         <h2
           data-aos="fade-up"

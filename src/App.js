@@ -16,6 +16,7 @@ import Footer from "./components/website/Footer";
 import LandingHeader from "./components/landingPage/LandingHeader";
 import LandingFooter from "./components/landingPage/LandingFooter";
 import { Toaster } from "react-hot-toast";
+import StickyCTA from "./components/StickyCTA";
 
 // Lazy loading components
 const Home = lazy(() => import("./pages/Home"));
@@ -44,6 +45,7 @@ function App() {
           <LoadingSpinnerContext />
           <ScrollToTop />
           <Toaster position="top-center" />
+          <StickyCTA />
           <Routes>
             <Route path="*" element={<Navigate to="/" />} />
             <Route
@@ -89,7 +91,7 @@ function App() {
             />
             <Route path="/services">
               <Route
-                path=":name"
+                path=":url"
                 element={
                   <>
                     <Header /> <ServiceDetails /> <Footer />

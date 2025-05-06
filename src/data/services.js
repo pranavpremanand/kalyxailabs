@@ -24,6 +24,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Progressive Web Apps:</span> App-like experiences with offline capabilities and push notifications</li>
         <li class="mb-3"><span class="font-semibold">API Development:</span> Secure RESTful and GraphQL APIs for seamless system integration</li>
         <li class="mb-3"><span class="font-semibold">Headless CMS:</span> Content-first architectures with Sanity, Contentful, or Strapi</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific Solutions</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">E-Commerce:</span> AI-powered product recommendation engines and personalized shopping experiences</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> HIPAA-compliant patient portals with telemedicine integration</li>
+        <li class="mb-3"><span class="font-semibold">Manufacturing:</span> Real-time equipment monitoring dashboards with predictive analytics</li>
+        <li class="mb-3"><span class="font-semibold">Finance:</span> Secure online banking platforms with fraud detection systems</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our Development Methodology</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -66,6 +74,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Enterprise Mobility:</span> Secure corporate apps with MDM integration</li>
         <li class="mb-3"><span class="font-semibold">IoT & Wearables:</span> Apps that connect with smart devices and sensors</li>
         <li class="mb-3"><span class="font-semibold">App Modernization:</span> Upgrading legacy applications to modern standards</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific Mobile Solutions</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">Retail:</span> Augmented reality shopping experiences and mobile payment integration</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> HIPAA-compliant telemedicine apps with AI symptom checkers</li>
+        <li class="mb-3"><span class="font-semibold">Logistics:</span> Real-time fleet tracking with route optimization algorithms</li>
+        <li class="mb-3"><span class="font-semibold">Banking:</span> Biometric-secured mobile banking with AI-powered financial insights</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our App Development Process</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -108,6 +124,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">AR/VR Experiences:</span> Immersive mixed reality applications</li>
         <li class="mb-3"><span class="font-semibold">Serious Games:</span> Educational and training simulations</li>
         <li class="mb-3"><span class="font-semibold">Multiplayer Systems:</span> Real-time and turn-based online gameplay</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific Game Solutions</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">Education:</span> Interactive learning games with progress tracking</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> Therapeutic games for rehabilitation and mental health</li>
+        <li class="mb-3"><span class="font-semibold">Corporate Training:</span> Gamified simulations for employee development</li>
+        <li class="mb-3"><span class="font-semibold">Marketing:</span> Branded entertainment experiences</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our Game Development Pipeline</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -150,6 +174,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Visual Design:</span> Pixel-perfect interfaces with design systems</li>
         <li class="mb-3"><span class="font-semibold">Prototyping:</span> Interactive demos for user testing</li>
         <li class="mb-3"><span class="font-semibold">Design Ops:</span> Handoff documentation and developer collaboration</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific Design Solutions</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">E-Commerce:</span> Conversion-optimized product pages and checkout flows</li>
+        <li class="mb-3"><span class="font-semibold">FinTech:</span> Secure yet intuitive financial dashboards</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> Accessible medical interfaces with clear data visualization</li>
+        <li class="mb-3"><span class="font-semibold">SaaS:</span> Complex feature sets simplified through thoughtful UX</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our Design Process</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -192,6 +224,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Tokenization:</span> Creating utility and security tokens with compliant standards</li>
         <li class="mb-3"><span class="font-semibold">Web3 Integration:</span> Bridging traditional apps with decentralized networks</li>
         <li class="mb-3"><span class="font-semibold">Crypto Wallets:</span> Secure multi-chain wallet solutions</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific Blockchain Solutions</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">Finance:</span> Decentralized finance (DeFi) platforms and payment systems</li>
+        <li class="mb-3"><span class="font-semibold">Supply Chain:</span> Transparent product provenance tracking</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> Secure patient data exchange networks</li>
+        <li class="mb-3"><span class="font-semibold">Real Estate:</span> Tokenized property ownership and fractional investing</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our Blockchain Development Framework</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -234,7 +274,41 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Conversational AI:</span> Natural language chatbots and virtual assistants</li>
         <li class="mb-3"><span class="font-semibold">Process Automation:</span> Intelligent workflow optimization</li>
         <li class="mb-3"><span class="font-semibold">Recommendation Engines:</span> Personalized customer experiences</li>
-      </ul>`,
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific AI Solutions</h2>
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-2">E-Commerce AI Optimization</h3>
+        <ul class="list-disc pl-6">
+          <li class="mb-2">Personalized product recommendations based on browsing behavior</li>
+          <li class="mb-2">Dynamic pricing algorithms that respond to market changes</li>
+          <li class="mb-2">Fraud detection systems with real-time transaction monitoring</li>
+          <li class="mb-2">Automated customer service with NLP-powered chatbots</li>
+          <li class="mb-2">Visual search capabilities for product discovery</li>
+        </ul>
+      </div>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-2">Healthcare AI Solutions</h3>
+        <ul class="list-disc pl-6">
+          <li class="mb-2">Diagnostic assistance with medical imaging analysis</li>
+          <li class="mb-2">Workflow automation for patient scheduling and records</li>
+          <li class="mb-2">Predictive analytics for patient risk stratification</li>
+          <li class="mb-2">Drug discovery and clinical trial optimization</li>
+          <li class="mb-2">Remote patient monitoring with IoT integration</li>
+        </ul>
+      </div>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-2">Manufacturing AI Applications</h3>
+        <ul class="list-disc pl-6">
+          <li class="mb-2">Predictive maintenance to reduce equipment downtime</li>
+          <li class="mb-2">Computer vision for quality control and defect detection</li>
+          <li class="mb-2">Supply chain optimization with demand forecasting</li>
+          <li class="mb-2">Energy consumption optimization in production lines</li>
+          <li class="mb-2">Autonomous material handling and logistics</li>
+        </ul>
+      </div>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our AI Development Process</h2>
       <ul class="list-decimal pl-6 mb-6">
         <li class="mb-3"><span class="font-semibold">Data Strategy:</span> Assessing quality and structuring pipelines</li>
@@ -282,6 +356,14 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Invoice Processing:</span> Automated extraction and validation</li>
         <li class="mb-3"><span class="font-semibold">Customer Service Bots:</span> 24/7 automated support solutions</li>
         <li class="mb-3"><span class="font-semibold">Legacy System Integration:</span> Connecting outdated systems with modern platforms</li>
+      </ul>
+      
+      <h2 class="text-xl font-semibold mt-8 mb-4">Industry-Specific RPA Applications</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-3"><span class="font-semibold">Banking:</span> Automated loan processing and fraud detection</li>
+        <li class="mb-3"><span class="font-semibold">Insurance:</span> Claims processing and policy administration</li>
+        <li class="mb-3"><span class="font-semibold">Healthcare:</span> Patient records management and billing automation</li>
+        <li class="mb-3"><span class="font-semibold">Retail:</span> Inventory management and order processing</li>
       </ul>`,
       secondSection: `<h2 class="text-xl font-semibold mb-4">Our RPA Implementation Process</h2>
       <ul class="list-decimal pl-6 mb-6">
@@ -387,9 +469,11 @@ export const services = [
   {
     title: "Natural Language Processing (NLP)",
     image: require("../assets/images/nlp-vector.png"),
-    shortDesc: "Developing advanced language understanding systems that enable machines to process, analyze, and generate human language with high accuracy.",
+    shortDesc:
+      "Developing advanced language understanding systems that enable machines to process, analyze, and generate human language with high accuracy.",
     technologies: ["Python", "NLTK", "spaCy", "BERT", "GPT"],
-    seoKeywords: "NLP services, natural language processing company, text analytics solutions, conversational AI development, sentiment analysis services",
+    seoKeywords:
+      "NLP services, natural language processing company, text analytics solutions, conversational AI development, sentiment analysis services",
     detailsPageImages: {
       first: require("../assets/images/services/nlp1.jpg"),
       second: require("../assets/images/services/nlp2.jpg"),
@@ -421,15 +505,17 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Context Awareness:</span> Understanding nuance and intent</li>
         <li class="mb-3"><span class="font-semibold">Domain Adaptation:</span> Specialized models for industry jargon</li>
         <li class="mb-3"><span class="font-semibold">Continuous Learning:</span> Systems that improve over time</li>
-      </ul>`
-    }
+      </ul>`,
+    },
   },
   {
     title: "Cloud Migration Services",
     image: require("../assets/images/cloud-migration-vector.png"),
-    shortDesc: "Seamlessly transitioning your infrastructure, applications, and data to cloud environments with minimal disruption and maximum security.",
+    shortDesc:
+      "Seamlessly transitioning your infrastructure, applications, and data to cloud environments with minimal disruption and maximum security.",
     technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes"],
-    seoKeywords: "cloud migration company, legacy system migration, hybrid cloud services, cloud infrastructure migration, application modernization",
+    seoKeywords:
+      "cloud migration company, legacy system migration, hybrid cloud services, cloud infrastructure migration, application modernization",
     detailsPageImages: {
       first: require("../assets/images/services/cloud-migration1.jpg"),
       second: require("../assets/images/services/cloud-migration2.jpg"),
@@ -461,15 +547,23 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Cost Transparency:</span> Clear ROI calculations</li>
         <li class="mb-3"><span class="font-semibold">Security Focus:</span> End-to-end data protection</li>
         <li class="mb-3"><span class="font-semibold">Multi-Cloud Expertise:</span> Vendor-agnostic solutions</li>
-      </ul>`
-    }
+      </ul>`,
+    },
   },
   {
     title: "Machine Learning Services",
     image: require("../assets/images/ml-dev-vector.png"),
-    shortDesc: "Building intelligent systems that learn from data to automate decisions, predict outcomes, and uncover valuable business insights.",
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "XGBoost"],
-    seoKeywords: "machine learning developers, predictive modeling, ML solutions, custom machine learning models, AI algorithm development",
+    shortDesc:
+      "Building intelligent systems that learn from data to automate decisions, predict outcomes, and uncover valuable business insights.",
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "XGBoost",
+    ],
+    seoKeywords:
+      "machine learning developers, predictive modeling, ML solutions, custom machine learning models, AI algorithm development",
     detailsPageImages: {
       first: require("../assets/images/services/ml1.webp"),
       second: require("../assets/images/services/ml2.webp"),
@@ -501,7 +595,7 @@ export const services = [
         <li class="mb-3"><span class="font-semibold">Continuous Learning:</span> Models that improve over time</li>
         <li class="mb-3"><span class="font-semibold">Scalable Architecture:</span> Handles growing data volumes</li>
         <li class="mb-3"><span class="font-semibold">Business Alignment:</span> Solutions tied to KPIs</li>
-      </ul>`
-    }
-  }
+      </ul>`,
+    },
+  },
 ];

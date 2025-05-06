@@ -21,57 +21,16 @@ import whyWorkWithUs4 from "../assets/images/whyworkwithus4.png";
 import LandingServices from "../components/landingPage/LandingServices";
 import { ArrowScrollButton } from "../components/ArrowButtons";
 import Portfolio from "../components/Portfolio";
+import { industries } from "./Home";
+import Approach from "../components/Approach";
 
 const ContactForm = lazy(() => import("../components/ContactForm"));
 const Testimonials = lazy(() => import("../components/Testimonials"));
 
-const industries = [
-  {
-    icon: Ambulance,
-    title: "Healthcare",
-    description: "HIPAA-compliant solutions for hospitals, clinics, and healthtech startups"
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Finance",
-    description: "Secure fintech applications and banking solutions"
-  },
-  {
-    icon: Cpu,
-    title: "Technology",
-    description: "Cutting-edge software for tech companies and startups"
-  },
-  {
-    icon: Store,
-    title: "Retail &\n E-commerce",
-    description: "High-conversion online stores and retail systems"
-  },
-  {
-    icon: Cloudy,
-    title: "SaaS",
-    description: "Scalable cloud-based software solutions"
-  },
-  {
-    icon: StickyNote,
-    title: "Business Services",
-    description: "Custom CRM and enterprise management tools"
-  },
-  {
-    icon: Tv,
-    title: "Media & Entertainment",
-    description: "Engaging platforms for content delivery"
-  },
-  {
-    icon: BrainCircuit,
-    title: "AI",
-    description: "Machine learning and AI-powered applications"
-  },
-];
-
 const LandingPage = ({ page }) => {
   const isWeb = page === "web";
   const serviceType = isWeb ? "Web Development" : "App Development";
-  const metaDescription = isWeb 
+  const metaDescription = isWeb
     ? "Kalyx AI Labs delivers custom web development services with 98% client satisfaction. Our websites convert 30% more leads with 90+ Lighthouse scores."
     : "Top-rated mobile app development company creating iOS & Android apps with 4.8+ store ratings. We build custom apps for startups and enterprises.";
 
@@ -82,17 +41,17 @@ const LandingPage = ({ page }) => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": `${serviceType} Services | Kalyx AI Labs`,
-          "description": metaDescription,
-          "url": window.location.href,
-          "publisher": {
+          name: `${serviceType} Services | Kalyx AI Labs`,
+          description: metaDescription,
+          url: window.location.href,
+          publisher: {
             "@type": "Organization",
-            "name": "Kalyx AI Labs",
-            "logo": {
+            name: "Kalyx AI Labs",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://kalyxailabs.com/logo.png"
-            }
-          }
+              url: "https://kalyxailabs.com/logo.png",
+            },
+          },
         })}
       </script>
 
@@ -107,7 +66,8 @@ const LandingPage = ({ page }) => {
               <span>{serviceType}</span>
             </div>
             <h1 data-aos="fade-up" className="heading text-white">
-              Premium {serviceType} Services for <span className="gradient-text">Business Growth</span>
+              Premium {serviceType} Services for{" "}
+              <span className="gradient-text">Business Growth</span>
             </h1>
             <p data-aos="fade-up" className="text-white text-lg">
               {isWeb
@@ -115,7 +75,9 @@ const LandingPage = ({ page }) => {
                 : `We develop award-winning mobile applications with 4.8+ average app store ratings. Our cross-platform apps deliver native performance while reducing development costs by 40%.`}
             </p>
             <div data-aos="fade-up" className="pt-5">
-              <ArrowScrollButton to="contact">Get Free Consultation</ArrowScrollButton>
+              <ArrowScrollButton to="contact">
+                Get Free Consultation
+              </ArrowScrollButton>
             </div>
           </div>
         </div>
@@ -154,24 +116,25 @@ const LandingPage = ({ page }) => {
       </section>
 
       <ContactForm headline="Free Strategy Session With Our Experts" />
-      
+
       <section className="bg-[#F7F7F9]">
         <Testimonials />
       </section>
 
       <LandingServices isWeb={isWeb} />
-      
+
       <Portfolio page={page} />
-      
+
       <section className="py-[4rem] bg-[#D8D8D8A3]">
         <div className="wrapper space-y-3">
           <h2 data-aos="fade-up" className="section-heading text-center">
             Industry-Specific {serviceType} Solutions
           </h2>
           <p data-aos="fade-up" className="text-center max-w-3xl mx-auto">
-            We deliver tailored digital solutions that address unique challenges across 8 major industries, with proven results in each sector.
+            We deliver tailored digital solutions that address unique challenges
+            across 8 major industries, with proven results in each sector.
           </p>
-          <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+          <div className="pt-5 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
             {industries.map((item) => {
               const IconComponent = item.icon;
               return (
@@ -198,7 +161,8 @@ const LandingPage = ({ page }) => {
             Our {serviceType} Methodology Delivers Results
           </h2>
           <p data-aos="fade-up" className="text-center max-w-3xl mx-auto mb-10">
-            Proven process that has delivered successful projects for 200+ clients worldwide
+            Proven process that has delivered successful projects for 200+
+            clients worldwide
           </p>
           <div
             data-aos="fade-up"
@@ -209,31 +173,31 @@ const LandingPage = ({ page }) => {
                 title: "Strategic Planning",
                 desc: "We analyze your business objectives and user needs to create a comprehensive roadmap with measurable KPIs.",
                 styles: "bg-[#7C42DA] lg:rotate-[-18deg] lg:translate-y-[8rem]",
-                icon: "📊"
+                icon: "📊",
               },
               {
                 title: "Agile Development",
                 desc: "Two-week sprints with continuous integration ensure we adapt quickly to changes while maintaining quality.",
                 styles: "bg-[#F8B000] lg:rotate-[-10deg] lg:translate-y-[3rem]",
-                icon: "🔄"
+                icon: "🔄",
               },
               {
                 title: "Quality Assurance",
                 desc: "Rigorous testing across 100+ devices and browsers guarantees flawless performance at launch.",
                 styles: "bg-[#B94391]",
-                icon: "🔍"
+                icon: "🔍",
               },
               {
                 title: "Performance Optimization",
                 desc: "We fine-tune every aspect for speed, achieving 90+ Lighthouse scores on all projects.",
                 styles: "bg-[#D1B9F7] lg:rotate-[10deg] lg:translate-y-[3rem]",
-                icon: "⚡"
+                icon: "⚡",
               },
               {
                 title: "Ongoing Support",
                 desc: "24/7 monitoring and quarterly updates keep your digital solution performing at its peak.",
                 styles: "bg-[#E85535] lg:rotate-[18deg] lg:translate-y-[8rem]",
-                icon: "🛠️"
+                icon: "🛠️",
               },
             ].map((item) => (
               <div
@@ -266,18 +230,24 @@ const LandingPage = ({ page }) => {
             className="w-full h-full object-cover absolute inset-0 z-[-2]"
           />
           <div className="p-10 text-white text-start space-y-3">
-            <h3 className="text-2xl font-semibold">Our Development Philosophy</h3>
+            <h3 className="text-2xl font-semibold">
+              Our Development Philosophy
+            </h3>
             <p className="max-w-xs">
-              Client-centric approach that has resulted in 98% satisfaction across 200+ projects.
+              Client-centric approach that has resulted in 98% satisfaction
+              across 200+ projects.
             </p>
             <div className="pt-7">
-              <ArrowScrollButton to="contact">Start Your Project</ArrowScrollButton>
+              <ArrowScrollButton to="contact">
+                Consult With Our Experts
+              </ArrowScrollButton>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pt-[4rem] wrapper space-y-3">
+      <Approach />
+      <section className="wrapper space-y-3">
         <h2
           data-aos="fade-up"
           className="section-heading text-center md:mb-[2rem]"
@@ -291,11 +261,15 @@ const LandingPage = ({ page }) => {
           >
             <div className="flex flex-col md:w-8/12 lg:w-9/12">
               <div className="md:px-[2.5rem]">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Award-Winning Technical Expertise</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Award-Winning Technical Expertise
+                </h3>
                 <p className="md:text-lg text-white font-semibold">
-                  Our team of certified developers and designers brings 10+ years average experience in {serviceType}. 
-                  We maintain rigorous quality standards with 98% client satisfaction across 200+ completed projects. 
-                  Recognized by Clutch as a top development firm for 3 consecutive years.
+                  Our team of certified developers and designers brings 10+
+                  years average experience in {serviceType}. We maintain
+                  rigorous quality standards with 98% client satisfaction across
+                  200+ completed projects. Recognized by Clutch as a top
+                  development firm for 3 consecutive years.
                 </p>
                 <Quote
                   className="size-10 fill-white/20 self-end mt-3"
@@ -316,11 +290,14 @@ const LandingPage = ({ page }) => {
           >
             <div className="flex flex-col md:w-8/12 lg:w-9/12">
               <div className="md:px-[2.5rem]">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Comprehensive Digital Solutions</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Comprehensive Digital Solutions
+                </h3>
                 <p className="md:text-lg text-white font-semibold">
-                  Beyond {serviceType}, we offer end-to-end services including UI/UX design, QA testing, 
-                  and ongoing maintenance. Our full-cycle approach means we can handle projects from 
-                  concept to launch and beyond, reducing your need for multiple vendors.
+                  Beyond {serviceType}, we offer end-to-end services including
+                  UI/UX design, QA testing, and ongoing maintenance. Our
+                  full-cycle approach means we can handle projects from concept
+                  to launch and beyond, reducing your need for multiple vendors.
                 </p>
                 <Quote
                   className="size-10 fill-white/20 self-end mt-3"
@@ -341,11 +318,14 @@ const LandingPage = ({ page }) => {
           >
             <div className="flex flex-col md:w-8/12 lg:w-9/12">
               <div className="md:px-[2.5rem]">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Proven Business Results</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Proven Business Results
+                </h3>
                 <p className="md:text-lg text-white font-semibold">
-                  Our solutions drive measurable outcomes - websites convert 30% more leads, 
-                  apps achieve 4.8+ store ratings, and clients see 40% operational improvements. 
-                  Case studies show our fintech solutions process transactions 50% faster.
+                  Our solutions drive measurable outcomes - websites convert 30%
+                  more leads, apps achieve 4.8+ store ratings, and clients see
+                  40% operational improvements. Case studies show our fintech
+                  solutions process transactions 50% faster.
                 </p>
                 <Quote
                   className="size-10 fill-white/20 self-end mt-3"
@@ -366,12 +346,14 @@ const LandingPage = ({ page }) => {
           >
             <div className="flex flex-col md:w-8/12 lg:w-9/12">
               <div className="md:px-[2.5rem]">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Industry-Specific Expertise</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Industry-Specific Expertise
+                </h3>
                 <p className="md:text-lg text-white font-semibold">
-                  We understand sector-specific challenges in healthcare, finance, 
-                  e-commerce and more. Our healthcare apps improve patient outcomes, 
-                  while retail solutions boost conversions by 25%. Each solution 
-                  incorporates industry compliance standards.
+                  We understand sector-specific challenges in healthcare,
+                  finance, e-commerce and more. Our healthcare apps improve
+                  patient outcomes, while retail solutions boost conversions by
+                  25%. Each solution incorporates industry compliance standards.
                 </p>
                 <Quote
                   className="size-10 fill-white/20 self-end mt-3"
@@ -387,8 +369,11 @@ const LandingPage = ({ page }) => {
           </div>
         </div>
       </section>
-      
-      <ContactForm id="contact" headline="Ready to Transform Your Digital Presence?" />
+
+      <ContactForm
+        id="contact"
+        headline="Ready to Transform Your Digital Presence?"
+      />
     </>
   );
 };

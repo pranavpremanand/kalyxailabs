@@ -9,7 +9,7 @@ const Blogs = () => {
     <div className="pt-[10rem] pb-[4rem] bg-gradient-to-b from-[#f8e4de] to-[#f5f5f5]">
       <div className="wrapper">
         <h1 data-aos="fade-up" className="section-heading text-center">
-          Blogs
+          Insights
         </h1>
         <div className="max-w-5xl mx-auto mt-7 grid sm:grid-cols-2 gap-5">
           {[blog1, blog2, blog3, blog1, blog2, blog3].map((item, i) => (
